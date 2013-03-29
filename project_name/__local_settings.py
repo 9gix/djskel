@@ -1,4 +1,4 @@
-# Local settings for {{ project_name }} project.
+# Local settings for {{ project_name }} project.  
 LOCAL_SETTINGS = True
 from settings import *
 
@@ -24,7 +24,7 @@ if DEBUG:
 
     # Debug Toolbar Configuration
     INSTALLED_APPS += ('debug_toolbar',)
-    DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS':True}
+    DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS':False}
     MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
     INTERNAL_IPS = ('127.0.0.1',)
 
