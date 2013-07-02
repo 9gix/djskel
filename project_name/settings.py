@@ -117,12 +117,15 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     # Internal Apps
+    'accounts',
 
     # 3rd Party Apps
     'south',
     'django_extensions',
 
 )
+
+AUTH_USER_MODEL = 'accounts.User'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
