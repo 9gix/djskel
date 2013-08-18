@@ -1,7 +1,8 @@
 # Global settings for {{ project_name }} project.
 import os
 
-PROJECT_DIR = os.path.dirname(__file__)
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_DIR = os.path.dirname(SETTINGS_DIR)
 PUBLIC_DIR = os.path.join(PROJECT_DIR, 'public')
 
 DEBUG = False
@@ -74,9 +75,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '_(xp07_d@nlvmb01ht2f(*kvavqern==(6sl*s4!2id29^-^-8'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -155,11 +153,3 @@ LOGGING = {
         },
     }
 }
-
-try:
-    LOCAL_SETTINGS
-except NameError:
-    try:
-        from local_settings import *
-    except ImportError:
-        pass
